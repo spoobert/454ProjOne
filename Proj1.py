@@ -151,9 +151,17 @@ def main():
         if problem == 0:
             break
         if problem == 1:
-               result = la.matrix_power(A,100)
-               result = S.dot(result).dot(F)
-               print(result)
+            while True:
+                try:
+                    print("Please enter n (1-300).")
+                    n = int(raw_input("Input n: "))
+                except ValueError:
+                    continue
+                else:
+                    break
+            result = la.matrix_power(A, n)
+            result = S.dot(result).dot(F)
+            print(result)
         if problem == 2:
             # get correct input for k
             while True:
