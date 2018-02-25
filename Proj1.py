@@ -113,7 +113,7 @@ def MinString(state, queue, parent, explored, digitList, k):
         # keep looping until all possible paths have been checked
         # if the queue is less than 0, break out, because no string exists
         if len(queue) <= 0:
-            break;
+            break
         # pop the first path from the queue
         path = queue.pop()
         # get the state of the path just popped
@@ -145,16 +145,16 @@ def main():
     while True:
         try:
             # print ("Which problem would you like to run: 1 or 2?")
-            problem = int (raw_input("Which problem would you like to run: 1 or 2 (q to quit): "))
+            problem = int(raw_input("Which problem would you like to run: 1 or 2 (0 to quit): "))
         except ValueError:
             continue
-        if problem == 'q':
-            return;
+        if problem == 0:
+            break
         if problem == 1:
                result = la.matrix_power(A,100)
                result = S.dot(result).dot(F)
                print(result)
-        if (problem == 2):
+        if problem == 2:
             # get correct input for k
             while True:
                 try:
@@ -185,6 +185,7 @@ def main():
 
             if output != "No string exists":
                 output = reverseString(output)
-            print "Shortest multiple of k using digits " + digitStrInput + ": " + output
-    return
+            print("Shortest multiple of k using digits " + digitStrInput + ": " + output)
+
+
 main()
