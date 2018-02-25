@@ -1,3 +1,11 @@
+# Project 1
+# CS 454
+
+# Dylan Marcus
+# Devin Brown
+# Colin Franceschini
+
+
 import numpy as np
 from numpy import linalg as la
 
